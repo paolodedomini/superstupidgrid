@@ -1,5 +1,5 @@
-@mixin col($name:primary, $numeroColonne:5, $minwidth:0, $pads:0, $margs:0, $background: #ff0000) {
-    .col__#{$numeroColonne}-#{$name} {
+@mixin col( $numeroColonne:5, $minwidth:0, $pads:0, $margs:0, $background: #ff0000) {
+    .col__#{$numeroColonne} {
         flex-basis: calc(100% / $numeroColonne);
         min-width: $minwidth;
         padding: $pads;

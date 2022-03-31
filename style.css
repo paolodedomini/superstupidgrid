@@ -20,32 +20,33 @@ $background: #ff0000,
 */
 /*
 CONTAINER (name, maxwidth, padding, justify-vontent, align-items)
+COL (numero colonne, max-width, padding, margin, background-color)
 */
-.col__3-articles {
+.col__3 {
   flex-basis: 33.3333333333%;
   min-width: 0;
   padding: 10px;
   margin: 0px;
   background: red;
 }
-.col__3-articles:first-child {
+.col__3:first-child {
   margin-left: 0;
 }
-.col__3-articles:last-child {
+.col__3:last-child {
   margin-right: 0;
 }
 
-.col__3-news {
+.col__3 {
   flex-basis: 33.3333333333%;
   min-width: 300px;
   padding: 10px;
   margin: 10px 5px;
   background: blue;
 }
-.col__3-news:first-child {
+.col__3:first-child {
   margin-left: 0;
 }
-.col__3-news:last-child {
+.col__3:last-child {
   margin-right: 0;
 }
 
@@ -63,7 +64,7 @@ CONTAINER (name, maxwidth, padding, justify-vontent, align-items)
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1920px;
   padding: 20px;
 }
 
