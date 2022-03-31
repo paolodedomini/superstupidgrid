@@ -3,7 +3,8 @@
 
 /*
 CONTAINER (name, maxwidth, padding, justify-vontent, align-items)
-COL (numero colonne, max-width, padding, margin, background-color)
+COL (numero colonne, max-width, padding, margin, background-color
+)
 */
 
 @include col(3, 0, 10px, 0px, red);
