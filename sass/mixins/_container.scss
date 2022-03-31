@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+  }
+  
+
+  @mixin container(
+    $name: fluid,
+    $maxwidth: 100%,
+    $padding: 0,
+    $justify: flex-start,
+    $align: flex-start) {
+
+        .container-#{$name}{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: $justify;
+        align-items: $align;
+        max-width: $maxwidth;
+        padding: $padding;
+      }
+  }
+  
+  /*
+  CONTAINER-->
+   $name: container <or container-fluid> 
+   $maxwidth: 100%,
+   $padding: 0,
+   $justify: flex-start,
+   $align: flex-start
+  */
+  
+  
+
+  
+  /*COL--> 
+  $name:primary, 
+  $numeroColonne:5, 
+  $minwidth -- per gestire gli a capo
+  $pads:0, 
+  $margs:0, 
+  $background: #ff0000,
+  */
+  
+  

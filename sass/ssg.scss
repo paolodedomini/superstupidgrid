@@ -1,0 +1,13 @@
+@import './mixins/column';
+@import './mixins/container';
+
+/*
+CONTAINER (name, maxwidth, padding, justify-vontent, align-items)
+*/
+
+@include col(articles, 3, 0, 10px, 0px, red);
+@include col(news, 3, 300px, 10px, 10px 5px, blue);
+@include container();
+@include container(news-home, 1200px, 20px, )
+
+  

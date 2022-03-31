@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+/*
+CONTAINER-->
+ $name: container <or container-fluid> 
+ $maxwidth: 100%,
+ $padding: 0,
+ $justify: flex-start,
+ $align: flex-start
+*/
+/*COL--> 
+$name:primary, 
+$numeroColonne:5, 
+$minwidth -- per gestire gli a capo
+$pads:0, 
+$margs:0, 
+$background: #ff0000,
+*/
+/*
+CONTAINER (name, maxwidth, padding, justify-vontent, align-items)
+*/
+.col__3-articles {
+  flex-basis: 33.3333333333%;
+  min-width: 0;
+  padding: 10px;
+  margin: 0px;
+  background: red;
+}
+.col__3-articles:first-child {
+  margin-left: 0;
+}
+.col__3-articles:last-child {
+  margin-right: 0;
+}
+
+.col__3-news {
+  flex-basis: 33.3333333333%;
+  min-width: 300px;
+  padding: 10px;
+  margin: 10px 5px;
+  background: blue;
+}
+.col__3-news:first-child {
+  margin-left: 0;
+}
+.col__3-news:last-child {
+  margin-right: 0;
+}
+
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 100%;
+  padding: 0;
+}
+
+.container-news-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

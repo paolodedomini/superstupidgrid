@@ -1,0 +1,17 @@
+@mixin col($name:primary, $numeroColonne:5, $minwidth:0, $pads:0, $margs:0, $background: #ff0000) {
+    .col__#{$numeroColonne}-#{$name} {
+        flex-basis: calc(100% / $numeroColonne);
+        min-width: $minwidth;
+        padding: $pads;
+        margin: $margs;
+        background: $background;
+
+        &:first-child {
+            margin-left: 0
+        }
+
+        &:last-child {
+            margin-right: 0
+        }
+    }
+}
