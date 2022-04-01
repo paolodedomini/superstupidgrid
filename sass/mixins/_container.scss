@@ -1,9 +1,4 @@
-*{
-    box-sizing: border-box;
-  }
-  
-
-  @mixin container(
+@mixin container(
     $name: fluid,
     $maxwidth: 100%,
     $padding: 0,
@@ -17,6 +12,7 @@
         align-items: $align;
         max-width: $maxwidth;
         padding: $padding;
+        position: relative;
       }
   }
   

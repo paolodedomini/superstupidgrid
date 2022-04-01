@@ -1,0 +1,43 @@
+@import './mixins/column';
+@import './reset.scss';
+@import './mixins/container';
+@import './mixins/media';
+@import './mixins/typo';
+
+// media queries
+@include tablet{};
+@include phone{};
+@include large{};
+@include desktop{};
+
+
+@include container();
+@include container(jumbo-home, 100%, );
+
+/*
+CONTAINER (name, maxwidth, padding, justify-content, align-items)
+COL (numero colonne, max-width, padding, margin, background-color
+)
+*/
+
+.container-jumbo-home{
+    @include col(4, 0, 0px, 0px, red);
+}
+
+.container-fluid{
+    @include col(1, 0, 10px, 0px, green)
+}
+
+.main-image-home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.main-title{
+    @include titles(14rem);
+    letter-spacing: -29px;
+    max-width: 400px;
+    font-weight: bold;
+    line-height: 0.9;
+}
