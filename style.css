@@ -141,6 +141,7 @@ COL (numero colonne, min-width, padding, margin, background-color
 .main-title {
   font-family: "BIZ UDPMincho", serif;
   font-size: 14rem;
+  color: #db6b00;
   letter-spacing: -29px;
   max-width: 730px;
   font-weight: bold;

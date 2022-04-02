@@ -36,7 +36,7 @@ COL (numero colonne, min-width, padding, margin, background-color
     z-index: -1;
 }
 .main-title{
-    @include titles(14rem);
+    @include titles(14rem, #db6b00);
     letter-spacing: -29px;
     max-width: 730px;
     font-weight: bold;
