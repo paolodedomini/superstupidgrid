@@ -87,20 +87,33 @@ $background: #ff0000,
 
 /*
 CONTAINER (name, maxwidth, padding, justify-content, align-items)
-COL (numero colonne, max-width, padding, margin, background-color
+COL (numero colonne, min-width, padding, margin, background-color
 )
 */
-.container-jumbo-home .col__4 {
-  flex-basis: 25%;
-  min-width: 0;
+.container-jumbo-home .col__sx {
+  flex: 0 1 40%;
+  min-width: auto;
   padding: 0px;
   margin: 0px;
-  background: red;
+  background: #ff000000;
 }
-.container-jumbo-home .col__4:first-child {
+.container-jumbo-home .col__sx:first-child {
   margin-left: 0;
 }
-.container-jumbo-home .col__4:last-child {
+.container-jumbo-home .col__sx:last-child {
+  margin-right: 0;
+}
+.container-jumbo-home .col__dx {
+  flex: 0 1 0%;
+  min-width: auto;
+  padding: 0px;
+  margin: 0px;
+  background: #ff000000;
+}
+.container-jumbo-home .col__dx:first-child {
+  margin-left: 0;
+}
+.container-jumbo-home .col__dx:last-child {
   margin-right: 0;
 }
 
@@ -129,7 +142,7 @@ COL (numero colonne, max-width, padding, margin, background-color
   font-family: "BIZ UDPMincho", serif;
   font-size: 14rem;
   letter-spacing: -29px;
-  max-width: 400px;
+  max-width: 730px;
   font-weight: bold;
   line-height: 0.9;
 }

@@ -16,12 +16,13 @@
 
 /*
 CONTAINER (name, maxwidth, padding, justify-content, align-items)
-COL (numero colonne, max-width, padding, margin, background-color
+COL (numero colonne, min-width, padding, margin, background-color
 )
 */
 
 .container-jumbo-home{
-    @include col(4, 0, 0px, 0px, red);
+    @include col-custom(sx,0.4, auto, 0px, 0px);
+    @include col-custom(dx,0, auto, 0px, 0px);
 }
 
 .container-fluid{
@@ -37,7 +38,7 @@ COL (numero colonne, max-width, padding, margin, background-color
 .main-title{
     @include titles(14rem);
     letter-spacing: -29px;
-    max-width: 400px;
+    max-width: 730px;
     font-weight: bold;
     line-height: 0.9;
 }
