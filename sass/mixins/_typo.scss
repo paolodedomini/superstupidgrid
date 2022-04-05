@@ -1,5 +1,5 @@
 @mixin titles($size:2rem, $color:black){
-    font-family: 'BIZ UDPMincho', serif;
+    font-family: $title;
     font-size: $size;
     color: $color;
 }

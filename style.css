@@ -49,72 +49,15 @@ img {
   width: 100%;
 }
 
-/*
-CONTAINER-->
- $name: container <or container-fluid> 
- $maxwidth: 100%,
- $padding: 0,
- $justify: flex-start,
- $align: flex-start
-*/
-/*COL--> 
-$name:primary, 
-$numeroColonne:5, 
-$minwidth -- per gestire gli a capo
-$pads:0, 
-$margs:0, 
-$background: #ff0000,
-*/
-.container-fluid {
+.container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: unset;
+  align-items: unset;
   max-width: 100%;
   padding: 0;
+  flex-direction: row;
   position: relative;
-}
-
-.container-jumbo-home {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  max-width: 100%;
-  padding: 0;
-  position: relative;
-}
-
-/*
-CONTAINER (name, maxwidth, padding, justify-content, align-items)
-COL (numero colonne, min-width, padding, margin, background-color
-)
-*/
-.container-jumbo-home .col__sx {
-  flex: 0 1 40%;
-  min-width: auto;
-  padding: 0px;
-  margin: 0px;
-  background: #ff000000;
-}
-.container-jumbo-home .col__sx:first-child {
-  margin-left: 0;
-}
-.container-jumbo-home .col__sx:last-child {
-  margin-right: 0;
-}
-.container-jumbo-home .col__dx {
-  flex: 0 1 0%;
-  min-width: auto;
-  padding: 0px;
-  margin: 0px;
-  background: #ff000000;
-}
-.container-jumbo-home .col__dx:first-child {
-  margin-left: 0;
-}
-.container-jumbo-home .col__dx:last-child {
-  margin-right: 0;
 }
 
 .container-fluid .col__1 {
@@ -131,6 +74,60 @@ COL (numero colonne, min-width, padding, margin, background-color
   margin-right: 0;
 }
 
+.container-jumbo-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: unset;
+  align-items: unset;
+  max-width: 100%;
+  padding: 0;
+  flex-direction: row;
+  position: relative;
+}
+.container-jumbo-home .col__sx {
+  flex: 1 1 40%;
+  min-width: auto;
+  padding: 0px;
+  margin: 0px;
+  background: #ff000000;
+}
+.container-jumbo-home .col__sx:first-child {
+  margin-left: 0;
+}
+.container-jumbo-home .col__sx:last-child {
+  margin-right: 0;
+}
+.container-jumbo-home .col__dx {
+  flex: 1 1 60%;
+  min-width: auto;
+  padding: 0px;
+  margin: 0px;
+  background: #ff000000;
+}
+.container-jumbo-home .col__dx:first-child {
+  margin-left: 0;
+}
+.container-jumbo-home .col__dx:last-child {
+  margin-right: 0;
+}
+
+.container-cosa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 2rem;
+  flex-direction: column;
+  position: relative;
+}
+
+/*
+CONTAINER (name, maxwidth, padding, justify-content, align-items, direzione)
+COL (numero colonne, min-width, padding, margin, background-color
+)
+COL CUSTOM ($nome, $porzione:0.5, $minwidth:auto, $pads:0, $margs:0, $background: #ff000000)
+*/
 .main-image-home {
   position: absolute;
   top: 0;
@@ -146,6 +143,36 @@ COL (numero colonne, min-width, padding, margin, background-color
   max-width: 730px;
   font-weight: bold;
   line-height: 0.9;
+}
+
+.navwrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.navwrapper nav ul {
+  display: flex;
+  border: 1px solid;
+  padding: 12px;
+}
+.navwrapper nav li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+.navwrapper nav li a {
+  color: #1a1a1a;
+}
+
+section.container-cosa {
+  background: white;
+  margin-top: 10rem;
+}
+section.container-cosa p {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
 }
 
 /*# sourceMappingURL=style.css.map */

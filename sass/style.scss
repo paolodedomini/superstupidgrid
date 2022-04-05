@@ -1,44 +1,84 @@
-@import './mixins/column';
-@import './reset.scss';
-@import './mixins/container';
-@import './mixins/media';
-@import './mixins/typo';
+@import "./mixins/column";
+@import "./reset.scss";
+@import "./mixins/container";
+@import "./mixins/media";
+@import "./mixins/typo";
 
 // media queries
-@include tablet{};
-@include phone{};
-@include large{};
-@include desktop{};
-
-
-@include container();
-@include container(jumbo-home, 100%, );
+@include tablet {
+}
+@include phone {
+}
+@include large {
+}
+@include desktop {
+}
+.container{
+    @include container();
+}
+.container-fluid {
+    @include col(1, 0, 10px, 0px, green);
+  }  
+.container-jumbo-home{
+    @include container(100%);
+    @include col-custom(sx, 0.4, auto, 0px, 0px);
+    @include col-custom(dx, 0.6, auto, 0px, 0px);
+}
+.container-cosa{
+    @include container(100%, 2rem, center, center, column);
+}
 
 /*
-CONTAINER (name, maxwidth, padding, justify-content, align-items)
+CONTAINER (name, maxwidth, padding, justify-content, align-items, direzione)
 COL (numero colonne, min-width, padding, margin, background-color
 )
+COL CUSTOM ($nome, $porzione:0.5, $minwidth:auto, $pads:0, $margs:0, $background: #ff000000)
 */
 
-.container-jumbo-home{
-    @include col-custom(sx,0.4, auto, 0px, 0px);
-    @include col-custom(dx,0, auto, 0px, 0px);
+
+
+.main-image-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.main-title {
+  @include titles(14rem, #db6b00);
+  letter-spacing: -29px;
+  max-width: 730px;
+  font-weight: bold;
+  line-height: 0.9;
+}
+.navwrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  nav {
+    ul {
+      display: flex;
+      border: 1px solid;
+      padding: 12px;
+    }
+    li {
+      font-family: $text;
+      font-size: 1rem;
+      margin: 0.5rem;
+      a {
+        color: $scuro;
+      }
+    }
+  }
 }
 
-.container-fluid{
-    @include col(1, 0, 10px, 0px, green)
-}
+section.container-cosa {
+  background: white;
+  margin-top: 10rem;
 
-.main-image-home{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-.main-title{
-    @include titles(14rem, #db6b00);
-    letter-spacing: -29px;
-    max-width: 730px;
-    font-weight: bold;
-    line-height: 0.9;
+  p{
+      text-align: center;
+      font-family: $text;
+      font-size: 1rem;
+      line-height: 23px;
+  }
 }
