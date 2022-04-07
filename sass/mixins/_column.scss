@@ -1,10 +1,10 @@
-@mixin col( $numeroColonne:5, $minwidth:auto, $pads:0, $margs:0, $background: #ff000000) {
+@mixin col( $numeroColonne:5, $minwidth:auto, $pads:0, $margs:0,) {
     .col__#{$numeroColonne} {
         flex-basis: (100%/$numeroColonne);
         min-width: $minwidth;
         padding: $pads;
         margin: $margs;
-        background: $background;
+       
 
         &:first-child {
             margin-left: 0
@@ -16,13 +16,12 @@
     }
 }
 
-@mixin col-custom($nome, $porzione:0.5, $minwidth:auto, $pads:0, $margs:0, $background: #ff000000) {
+@mixin col-custom($nome, $porzione:0.5, $minwidth:auto, $pads:0, $margs:0) {
     .col__#{$nome} {
         flex: (1 1 (100% * $porzione));
         min-width: $minwidth;
         padding: $pads;
         margin: $margs;
-        background: $background;
 
         &:first-child {
             margin-left: 0

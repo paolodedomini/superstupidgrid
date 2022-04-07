@@ -19,6 +19,7 @@
 .container-fluid {
     @include col(1, 0, 10px, 0px, green);
   }  
+  
 .container-jumbo-home{
     @include container(100%);
     @include col-custom(sx, 0.4, auto, 0px, 0px);
