@@ -5,80 +5,146 @@
 @import "./mixins/typo";
 
 // media queries
-@include tablet {
+html {
+  font-family: $text;
+  font-size: 100%;
 }
-@include phone {
+strong {
+  font-weight: bold;
 }
-@include large {
+p {
+  margin: 1rem 0;
+  line-height: 24px;
 }
-@include desktop {
-}
-.container{
-    @include container();
+.container {
+  @include container();
 }
 .container-fluid {
-    @include col(1, 0, 10px, 0px, green);
-  }  
-.container-jumbo-home{
-    @include container(100%);
-    @include col-custom(sx, 0.4, auto, 0px, 0px);
-    @include col-custom(dx, 0.6, auto, 0px, 0px);
-}
-.container-cosa{
-    @include container(100%, 2rem, center, center, column);
+  @include col(1, 0, 10px, 0px);
 }
 
+.container-jumbo-home {
+  //CONTAINER (maxwidth, padding, justify-content, align-items, direzione)
+  @include container(100%);
+  @include col-custom(sx, 0.4, auto, 0px, 0px);
+  @include col-custom(dx, 0.6, auto, 0px, 0px);
+}
+.container-cosa {
+  @include container(100%, 2rem, center, center, column);
+  padding: 4rem 0;
+}
+.container-divisorio {
+  @include container(100%, 1rem, center, center);
+}
+
+.container-center-home {
+  @include container(966px, 2rem);
+  @include col(2, auto, 1rem);
+}
+.container-come{
+  @include container(966px, 2rem);
+}
 /*
 CONTAINER (name, maxwidth, padding, justify-content, align-items, direzione)
 COL (numero colonne, min-width, padding, margin, background-color
 )
 COL CUSTOM ($nome, $porzione:0.5, $minwidth:auto, $pads:0, $margs:0, $background: #ff000000)
 */
+.container-jumbo-home {
+  .main-title {
+    @include titles(14rem, #db6b00);
+    letter-spacing: -29px;
+    max-width: 730px;
+    font-weight: bold;
+    line-height: 0.9;
+    &:hover {
+      .home-duck {
+        animation: duckrotate 1s infinite;
+      }
+    }
+  }
+  .home-duck {
+    max-width: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+  }
 
-
-
-.main-image-home {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.main-title {
-  @include titles(14rem, #db6b00);
-  letter-spacing: -29px;
-  max-width: 730px;
-  font-weight: bold;
-  line-height: 0.9;
+  .main-image-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 .navwrapper {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   nav {
     ul {
       display: flex;
-      border: 1px solid;
+      background: $giallo;
       padding: 12px;
     }
     li {
       font-family: $text;
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin: 0.5rem;
       a {
         color: $scuro;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
 }
-
+section.container-center-home {
+  p {
+    text-align: justify;
+  }
+}
 section.container-cosa {
   background: white;
   margin-top: 10rem;
+  font-size: 1.5rem;
 
-  p{
-      text-align: center;
-      font-family: $text;
-      font-size: 1rem;
-      line-height: 23px;
+
+  p {
+    text-align: center;
+    font-family: $text;
+
+    line-height: 23px;
+
+    span {
+      color: $gialloscuro;
+      font-weight: bold;
+    }
+  }
+  ul {
+    margin-top: 1rem;
+  }
+  img.home-icons {
+    max-width: 80px;
+    vertical-align: middle;
+  }
+}
+
+.container-divisorio {
+  .divisorio {
+    max-width: 100px;
+  }
+}
+section.container-come{
+  padding:0 3rem;
+}
+@keyframes duckrotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
