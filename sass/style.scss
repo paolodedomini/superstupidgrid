@@ -31,7 +31,7 @@ p {
 }
 .container-cosa {
   @include container(100%, 2rem, center, center, column);
-  padding: 4rem 0;
+  padding: 4rem 0 2rem 0;
 }
 .container-divisorio {
   @include container(100%, 1rem, center, center);
@@ -123,9 +123,7 @@ section.container-cosa {
       font-weight: bold;
     }
   }
-  ul {
-    margin-top: 1rem;
-  }
+ 
   img.home-icons {
     max-width: 80px;
     vertical-align: middle;
